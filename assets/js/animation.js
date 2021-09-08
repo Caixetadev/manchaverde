@@ -76,3 +76,25 @@ function scrollToPosition(to) {
     window.scroll(newX, newY);
   }, 1000 / 120); // 60 fps
 };
+
+/* =============== Scroll Reveal =============== */
+const sr = ScrollReveal({
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  reset: true
+})
+
+const pi = ScrollReveal({
+    distance: '32px',
+    duration: 2500,
+    delay: 400,
+    reset: true
+})
+
+sr.reveal(`h1`, {delay: 50})
+sr.reveal(`h1`, {origin: 'top', interval: 100})
+sr.reveal(`.img`, {origin: 'top', interval: 100})
+pi.reveal(`.left`, {origin: 'left', interval: 100})
+pi.reveal(`.imgs`, {origin: 'right', interval: 100})
+pi.reveal(`.bottom`, {origin: 'bottom', interval: 100})
