@@ -50,6 +50,7 @@ a
 
   ul
     display: flex
+    margin: 0
 
     li + li
       margin-left: 20px
@@ -148,7 +149,7 @@ section
   background: #404040
 
 ::-webkit-scrollbar-thumb
-  background: #044330ad
+  background: #006633
   border-radius: 10px
 
 #btn-mobile
@@ -174,7 +175,128 @@ section
       height: 400px
       object-fit: cover
 
+#loja
+  .title
+    width: 80%
+    display: flex
+    justify-content: center
+    margin: 50px auto
+    font-size: 40px
+    text-align: center
+
+.containerLoja
+  width: 80%
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+
+  .products
+    margin: 0 auto
+
+    .card
+      width: 320px
+      height: 480px
+      border-radius: 8px
+      background: #f2f2f2
+      box-shadow: 5px 15px 22px rgba(0, 0, 0, 0.2)
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      position: relative
+      margin: 10px
+
+      .img
+        padding: 16px
+
+        img
+          width: 288px
+          height: 306px
+          transition: .3s
+
+      &:hover
+        background: #00994D
+
+      &:hover .img img
+        transform: scale(1.1)
+        transform: translateY(-100px)
+
+      .desc
+        position: absolute
+        text-align: center
+        bottom: 0
+        opacity: 0
+        width: 100%
+        padding: 16px
+        color: #fff
+        background: #006633
+        transition: .3s
+
+        p, h5, h3
+          margin: 0
+
+      &:hover .desc
+        opacity: 1
+        transform: translateY(-50px)
+
+      .btn
+        background: #00994D
+        color: #fff
+        border-radius: 35px
+        padding: 10px 45px
+        text-decoration: none
+        transition: .3s ease
+
+      &:hover .btn
+        margin-top: 15px
+        background: #00361B
+        color: #fff
+        border: 1px solid #fff
+        transform: translateY(20px)
+
+section
+  .containerMemorias
+    width: 80%
+    margin: 50px auto
+
+    h1
+      display: flex
+      justify-content: center
+      margin: 60px 0
+
+    .carousel
+      img
+        height: 500px
+
+.footer
+  .container-footer
+    background-color: #044330
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: space-around
+    margin-top: 80px
+
+    .social
+      margin-left: 10px
+      color: #fff
+
+      a
+        color: #fff
+        margin-right: 20px
+
+        &:hover
+          color: #00994D
+
+  p
+    color: #fff
+    font-family: "Karla", sans-serif
+    margin: 0
+
 @media (max-width: 600px)
+  html
+    overflow-x: hidden
+
   .container
     .logo
       img
@@ -193,11 +315,43 @@ section
         #text
           font-size: 90px
 
+  section
+    .containerMemorias
+      width: 80%
+      height: 300px
+      margin: 50px auto
+
+      h1
+        font-size: 40px
+        margin-bottom: 20px
+        text-align: center
+
+      .carousel
+        img
+          height: 300px
+  .footer
+    .container-footer
+      margin-top: 160px
+
+  .containerLoja
+    width: 80%
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+
+    .products
+      margin: 0 auto
+
+      .card
+        width: 240px
+        height: 470px
+        margin: 10px auto
+
   #nav ul
     display: block
     position: absolute
     width: 70%
-    top: 59px
+    top: 71px
     right: 0px
     background-color: #044330f5
     height: 0
