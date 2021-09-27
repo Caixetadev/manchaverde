@@ -98,3 +98,4 @@ sr.reveal(`.img`, {origin: 'top', interval: 100})
 pi.reveal(`.left`, {origin: 'left', interval: 100})
 pi.reveal(`.imgs`, {origin: 'right', interval: 100})
 pi.reveal(`.bottom`, {origin: 'bottom', interval: 100})
+
